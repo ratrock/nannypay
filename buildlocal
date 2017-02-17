@@ -1,0 +1,5 @@
+rm -rf _builds _steps _projects
+
+wercker build --git-domain github.com --git-owner ratrock --git-repository nannypay
+
+rm -rf _builds _steps _projects
