@@ -63,17 +63,17 @@ deploy:
    - internal/docker-push:
        username: $DOCKER_USERNAME
        password: $DOCKER_PASSWORD
-       cmd: /pipeline/source/hello
-       port: "8080"
+       cmd: /pipeline/source/nannypay
+       # port: "8080"
        tag: latest
        repository: ratrock/nannypay
        registry: https://registry.hub.docker.com
 
-   - cng/cf-deploy:
-       api: $API
-       user: $USER
-       password: $PASSWORD
-       org: $ORG
-       space: $SPACE
-       appname: nannypay
-       docker_image: ratrock/nannypay
+   # - cng/cf-deploy:
+   #     api: $API
+   #     user: $USER
+   #     password: $PASSWORD
+   #     org: $ORG
+   #     space: $SPACE
+   #     appname: nannypay
+   #     docker_image: ratrock/nannypay
